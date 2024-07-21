@@ -85,11 +85,12 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.22.2</version>
-				<configuration>
-					<argLine>${argLine} -Xmx2048m</argLine>
-				</configuration>
+            	<artifactId>maven-surefire-plugin</artifactId>
+            	<version>3.0.0-M7</version>
+            	<configuration>
+                <argLine>-Xmx4096m -javaagent:/home/ubuntu/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/home/ubuntu/jenkins/workspace/ttrend-job/target/jacoco.exec</argLine>
+                <forkCount>0</forkCount>
+            	</configuration>
 			</plugin>
 
 			<plugin>
