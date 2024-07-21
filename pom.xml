@@ -19,6 +19,10 @@
 		<java.version>1.8</java.version>
 		 <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
+	<properties>
+    	<sonar.javascript.node.maxspace>4096</sonar.javascript.node.maxspace>
+    	<sonar.javascript.node.timeout>600000</sonar.javascript.node.timeout>
+	</properties>
 
 	<dependencies>
 		<dependency>
