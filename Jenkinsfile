@@ -1,6 +1,6 @@
 def registry = 'https://trialyjhrvn.jfrog.io'
 def imageName = 'trialyjhrvn.jfrog.io/tttrend-docker-local/tttrend'
-def version   = '2.1.2'
+def version   = '2.1.3'
 pipeline {
     agent any
 environment {
