@@ -5,6 +5,7 @@ pipeline {
     agent any
 environment {
     PATH = "/opt/apache-maven-3.9.9/bin:$PATH"
+    KUBECONFIG = "/var/lib/jenkins/.kube/config"
 }
     stages {
         stage("build"){
