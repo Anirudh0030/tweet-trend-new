@@ -89,6 +89,17 @@ environment {
             }
         }
     }
-        
+        stage("Deploy to Kubernetes") {
+    steps {
+        script {
+            echo '<--------------- Deploying to Kubernetes --------------->'
+            sh '''
+            chmod +x deploy.sh
+            ./deploy.sh
+            '''
+            echo '<--------------- Deployment Completed --------------->'
+        }
+    }
+}       
 }
 }
