@@ -90,6 +90,16 @@ environment {
             }
         }
     }
+        stage('Setup kubeconfig') {
+            steps {
+                sh '''
+                    rm -rf ~/.kube
+                    mkdir -p ~/.kube
+                    aws eks --region us-east-1 update-kubeconfig --name valaxy-eks-01
+                '''
+            }
+        }
+        
         stage("Deploy to Kubernetes") {
     steps {
         script {
